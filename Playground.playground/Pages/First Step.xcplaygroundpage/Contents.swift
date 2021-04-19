@@ -35,56 +35,53 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
-
-//Move turtle middle bottom
-turtle.forward(steps: canvas.width / 2)
-turtle.drawSelf()
-
+let squaresize = 10
+//turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
 //Move turtle exact middle
 turtle.left(by: 90)
-turtle.forward(steps: canvas.height / 2)
+//turtle.forward(steps: 5 * squaresize)
 turtle.drawSelf()
     
 func arrow() {
 //Turtle right
 turtle.right(by:90)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //forward 5
 turtle.forward(steps: canvas.height / 5)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //right 90
 turtle.right(by: 90)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //forward 2
 turtle.forward(steps: canvas.height / 8)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //head
 turtle.left(by: 135)
 turtle.forward(steps: canvas.height / 4)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //head2
 turtle.left(by: 90)
 turtle.forward(steps: canvas.height / 4)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //90  1
 turtle.left(by: 135)
 turtle.forward(steps: canvas.height / 8)
-turtle.drawSelf()
+//turtle.drawSelf()
 //90  2
 turtle.right(by: 90)
 turtle.forward(steps: canvas.height / 5)
-turtle.drawSelf()
+//turtle.drawSelf()
 
 //final
 turtle.left(by: 90)
 turtle.forward(steps: canvas.height / 8)
-turtle.drawSelf()
+//turtle.drawSelf()
 }
 arrow()
 /*:
