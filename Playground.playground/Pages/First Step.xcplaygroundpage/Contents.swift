@@ -83,19 +83,32 @@ turtle.left(by: 90)
 turtle.forward(steps: 2 * squaresize)
 //turtle.drawSelf()
 }
-
-
-turtle.setX(to: 100)
-turtle.setY(to: 100)
-
-
-
 arrow()
-turtle.drawSelf()
+
 turtle.left(by: 90)
 turtle.forward(steps: 7 * squaresize)
 arrow()
-turtle.drawSelf()
+
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+
 turtle.left(by: 90)
 turtle.forward(steps: 7 * squaresize)
 arrow()
