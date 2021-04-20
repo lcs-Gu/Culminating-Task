@@ -36,19 +36,19 @@ PlaygroundPage.current.liveView = canvas
 
  */
 let squaresize = 10
-//turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
+
 //Move turtle exact middle
 turtle.left(by: 90)
-//turtle.forward(steps: 5 * squaresize)
 turtle.drawSelf()
-    
-func arrow() {
 //Turtle right
 turtle.right(by:90)
 //turtle.drawSelf()
+    
+func arrow() {
+
 
 //forward 5
-turtle.forward(steps: canvas.height / 5)
+turtle.forward(steps: 5 * squaresize)
 //turtle.drawSelf()
 
 //right 90
@@ -56,33 +56,48 @@ turtle.right(by: 90)
 //turtle.drawSelf()
 
 //forward 2
-turtle.forward(steps: canvas.height / 8)
+turtle.forward(steps: 1 * squaresize)
 //turtle.drawSelf()
 
 //head
 turtle.left(by: 135)
-turtle.forward(steps: canvas.height / 4)
+turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
 //turtle.drawSelf()
 
 //head2
 turtle.left(by: 90)
-turtle.forward(steps: canvas.height / 4)
+turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
 //turtle.drawSelf()
 
 //90  1
 turtle.left(by: 135)
-turtle.forward(steps: canvas.height / 8)
+turtle.forward(steps: 1 * squaresize)
 //turtle.drawSelf()
 //90  2
 turtle.right(by: 90)
-turtle.forward(steps: canvas.height / 5)
+turtle.forward(steps: 5 * squaresize)
 //turtle.drawSelf()
 
 //final
 turtle.left(by: 90)
-turtle.forward(steps: canvas.height / 8)
+turtle.forward(steps: 2 * squaresize)
 //turtle.drawSelf()
 }
+
+
+turtle.setX(to: 100)
+turtle.setY(to: 100)
+
+
+
+arrow()
+turtle.drawSelf()
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
+arrow()
+turtle.drawSelf()
+turtle.left(by: 90)
+turtle.forward(steps: 7 * squaresize)
 arrow()
 /*:
  ## Show the Live View
