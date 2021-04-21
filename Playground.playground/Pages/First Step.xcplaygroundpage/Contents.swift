@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
@@ -33,7 +33,7 @@ PlaygroundPage.current.liveView = canvas
  You can remove the code on line 49 and begin writing your own code.
  
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
 let squaresize = 10
 
@@ -43,75 +43,82 @@ turtle.drawSelf()
 //Turtle right
 turtle.right(by:90)
 //turtle.drawSelf()
-    
+
 func arrow() {
-
-
-//forward 5
-turtle.forward(steps: 5 * squaresize)
-//turtle.drawSelf()
-
-//right 90
-turtle.right(by: 90)
-//turtle.drawSelf()
-
-//forward 2
-turtle.forward(steps: 1 * squaresize)
-//turtle.drawSelf()
-
-//head
-turtle.left(by: 135)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
-//turtle.drawSelf()
-
-//head2
-turtle.left(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
-//turtle.drawSelf()
-
-//90  1
-turtle.left(by: 135)
-turtle.forward(steps: 1 * squaresize)
-//turtle.drawSelf()
-//90  2
-turtle.right(by: 90)
-turtle.forward(steps: 5 * squaresize)
-//turtle.drawSelf()
-
-//final
-turtle.left(by: 90)
-turtle.forward(steps: 2 * squaresize)
-//turtle.drawSelf()
+    
+    // Make sure lines are drawn
+    turtle.penDown()
+    
+    //forward 5
+    turtle.forward(steps: 5 * squaresize)
+    //turtle.drawSelf()
+    
+    //right 90
+    turtle.right(by: 90)
+    //turtle.drawSelf()
+    
+    //forward 2
+    turtle.forward(steps: 1 * squaresize)
+    //turtle.drawSelf()
+    
+    //head
+    turtle.left(by: 135)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
+    //turtle.drawSelf()
+    
+    //head2
+    turtle.left(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squaresize))))
+    //turtle.drawSelf()
+    
+    //90  1
+    turtle.left(by: 135)
+    turtle.forward(steps: 1 * squaresize)
+    //turtle.drawSelf()
+    //90  2
+    turtle.right(by: 90)
+    turtle.forward(steps: 5 * squaresize)
+    //turtle.drawSelf()
+    
+    //final
+    turtle.left(by: 90)
+    turtle.forward(steps: 2 * squaresize)
+    //turtle.drawSelf()
 }
-arrow()
 
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
+// Apply abstraction – use a loop to reduce complexity
+func se() {
+for _ in 1...9 {
+    
+    // Draw arrow
+    arrow()
 
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
+    // Gets turtle over into position to draw a new arrow
+    turtle.left(by: 90)
+    turtle.penUp()
+    turtle.forward(steps: 7 * squaresize)
 
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
-
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
-
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
-
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
-
-turtle.left(by: 90)
-turtle.forward(steps: 7 * squaresize)
-arrow()
+}
+}
+//Row function
+func row() {
+se()
+turtle.penUp()
+turtle.right(by: 180)
+turtle.forward(steps: 63 * squaresize)
+turtle.right(by: 90)
+turtle.forward(steps: 4 * squaresize)
+turtle.right(by: 90)
+turtle.penDown()
+se()
+}
+//Whole sheet page
+canvas.highPerformance = true
+for _ in 1...16{
+    row()
+    se()
+}
+canvas.highPerformance = false
 /*:
  ## Show the Live View
  Don't see any results?
@@ -119,7 +126,7 @@ arrow()
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
