@@ -87,36 +87,34 @@ func arrow() {
 }
 
 // Apply abstraction – use a loop to reduce complexity
-func se() {
-for _ in 1...9 {
-    
-    // Draw arrow
-    arrow()
-
-    // Gets turtle over into position to draw a new arrow
-    turtle.left(by: 90)
-    turtle.penUp()
-    turtle.forward(steps: 7 * squaresize)
-
-}
+func oneRowArrow() {
+    for _ in 1...9 {
+        
+        // Draw arrow
+        arrow()
+        
+        // Gets turtle over into position to draw a new arrow
+        turtle.left(by: 90)
+        turtle.penUp()
+        turtle.forward(steps: 7 * squaresize)
+        
+    }
 }
 //Row function
-func row() {
-se()
-turtle.penUp()
-turtle.right(by: 180)
-turtle.forward(steps: 63 * squaresize)
-turtle.right(by: 90)
-turtle.forward(steps: 4 * squaresize)
-turtle.right(by: 90)
-turtle.penDown()
-se()
+func beginNewRow() {
+    turtle.penUp()
+    turtle.right(by: 180)
+    turtle.forward(steps: 63 * squaresize)
+    turtle.right(by: 90)
+    turtle.forward(steps: 4 * squaresize)
+    turtle.right(by: 90)
+    turtle.penDown()
 }
 //Whole sheet page
 canvas.highPerformance = true
 for _ in 1...16{
-    row()
-    se()
+    oneRowArrow()
+    beginNewRow()
 }
 canvas.highPerformance = false
 /*:
