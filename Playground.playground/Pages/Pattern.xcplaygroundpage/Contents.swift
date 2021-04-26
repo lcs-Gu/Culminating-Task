@@ -117,25 +117,35 @@ turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))
 //Finish
 }
 
+//Making it more simple
+func oneRowShape() {
 //First Row
-
-    drawShape()
-
+for _ in 1...9 {
 turtle.right(by: 45)
+turtle.penUp()
 turtle.forward(steps: 8 * squareSize)
 turtle.left(by: 90)
 drawShape()
+}
+}
 
+//New row above
+func newRow() {
+turtle.penUp()
+turtle.forward(steps: 8 * squareSize)
+turtle.left(by: 90)
+turtle.forward(steps: 62 * squareSize)
+turtle.right(by: 90)
+turtle.penDown()
+}
 
-
-
-
-
-
-
-
-
-
-
+//Start of task
+canvas.highPerformance = true
+for _ in 1...17{
+    oneRowShape()
+    newRow()
+}
+canvas.highPerformance = false
+//End
 // Copy the SVG instructions to the clipboard (for use by the plotter)
 turtle.copySVGToClipboard()
