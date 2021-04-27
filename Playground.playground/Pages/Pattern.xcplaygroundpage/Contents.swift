@@ -48,8 +48,7 @@ let squareSize = 5
 turtle.penUp()
 turtle.forward(steps: 9 * squareSize)
 turtle.left(by: 90)
-turtle.forward(steps: 20 * squareSize)
-turtle.drawSelf()
+turtle.forward(steps: 19 * squareSize)
 
 func drawShape () {
     turtle.penDown()
@@ -132,14 +131,14 @@ func oneRowShape() {
 
 //Making new row simple
 func newRow() {
-//Beginning a new row
-turtle.penUp()
-turtle.left(by: 45)
-turtle.forward(steps: 8 * squareSize)
-turtle.left(by: 90)
-turtle.forward(steps: 72 * squareSize)
+    //Beginning a new row
+    turtle.penUp()
+    turtle.left(by: 45)
+    turtle.forward(steps: 8 * squareSize)
+    turtle.left(by: 90)
+    turtle.forward(steps: 72 * squareSize)
     turtle.right(by: 90)
-turtle.penDown()
+    turtle.penDown()
 }
 
 //Start
