@@ -38,7 +38,6 @@ PlaygroundPage.current.liveView = canvas
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
-
 /*:
  ## Show the Live View
  Don't see any results?

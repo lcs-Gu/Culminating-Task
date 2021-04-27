@@ -46,105 +46,111 @@ let squareSize = 5
 
 //Turtle to right position
 turtle.penUp()
-turtle.forward(steps: 10 * squareSize)
+turtle.forward(steps: 9 * squareSize)
 turtle.left(by: 90)
 turtle.forward(steps: 20 * squareSize)
 turtle.drawSelf()
 
 func drawShape () {
-turtle.penDown()
-//First part
-//Starting point
-turtle.left(by: 45)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Second
-turtle.left(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Third Point
-turtle.right(by: 135)
-turtle.forward(steps: 4 * squareSize)
-//turtle.drawSelf()
-
-//Fourth
-turtle.right(by: 90)
-turtle.forward(steps: 4 * squareSize)
-//turtle.drawSelf()
-
-//Fifth
-turtle.right(by: 45)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Sixth
-turtle.right(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Second Part
-//Seventh
-turtle.left(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Eighth
-turtle.left(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//Ninth
-turtle.right(by: 135)
-turtle.forward(steps: 4 * squareSize)
-//turtle.drawSelf()
-
-//Tenth
-turtle.right(by: 90)
-turtle.forward(steps: 4 * squareSize)
-//turtle.drawSelf()
-
-//Eleventh
-turtle.right(by: 45)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-
-//twelvth
-turtle.right(by: 90)
-turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
-//turtle.drawSelf()
-//Finish
+    turtle.penDown()
+    //First part
+    //Starting point
+    turtle.left(by: 45)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Second
+    turtle.left(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Third Point
+    turtle.right(by: 135)
+    turtle.forward(steps: 4 * squareSize)
+    //turtle.drawSelf()
+    
+    //Fourth
+    turtle.right(by: 90)
+    turtle.forward(steps: 4 * squareSize)
+    //turtle.drawSelf()
+    
+    //Fifth
+    turtle.right(by: 45)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Sixth
+    turtle.right(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Second Part
+    //Seventh
+    turtle.left(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Eighth
+    turtle.left(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //Ninth
+    turtle.right(by: 135)
+    turtle.forward(steps: 4 * squareSize)
+    //turtle.drawSelf()
+    
+    //Tenth
+    turtle.right(by: 90)
+    turtle.forward(steps: 4 * squareSize)
+    //turtle.drawSelf()
+    
+    //Eleventh
+    turtle.right(by: 45)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    
+    //twelvth
+    turtle.right(by: 90)
+    turtle.forward(steps: Int(round(2 * Double(2).squareRoot() * Double(squareSize))))
+    //turtle.drawSelf()
+    //Finish
 }
 
 //Making it more simple
 func oneRowShape() {
-//First Row
-for _ in 1...9 {
-turtle.right(by: 45)
-turtle.penUp()
-turtle.forward(steps: 8 * squareSize)
-turtle.left(by: 90)
-drawShape()
-}
+    drawShape()
+    //First Row
+    for _ in 1...9 {
+        turtle.right(by: 45)
+        turtle.penUp()
+        turtle.forward(steps: 8 * squareSize)
+        turtle.left(by: 90)
+        drawShape()
+    }
 }
 
-//New row above
+//Making new row simple
 func newRow() {
+//Beginning a new row
 turtle.penUp()
+turtle.left(by: 45)
 turtle.forward(steps: 8 * squareSize)
 turtle.left(by: 90)
-turtle.forward(steps: 62 * squareSize)
-turtle.right(by: 90)
+turtle.forward(steps: 72 * squareSize)
+    turtle.right(by: 90)
 turtle.penDown()
 }
 
-//Start of task
+//Start
 canvas.highPerformance = true
-for _ in 1...17{
+
+//Making a loop
+for _ in 1...10 {
     oneRowShape()
     newRow()
 }
+
 canvas.highPerformance = false
 //End
 // Copy the SVG instructions to the clipboard (for use by the plotter)
